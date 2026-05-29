@@ -1,0 +1,94 @@
+{
+  "_comment": "Illustrative example doll, hand-authored to show the schema. NOT engine output. The Sun as an astronomical body doll: canonical timed positions, computed aspect edges, an empty story layer ready for personal meaning. See ../SCHEMA.md.",
+
+  "id": "sha256:PLACEHOLDER_content_hash_of_canonical_facets",
+  "schema_version": "0.1.0",
+
+  "self": {
+    "kind": "celestial_body",
+    "names": ["Sun", "Sol"],
+    "aliases": ["☉"],
+    "scope": "canonical"
+  },
+
+  "body": {
+    "scope": "canonical",
+    "mass_kg": {
+      "value": 1.9885e30,
+      "asserted_by": ["iau:nominal_solar_mass_parameter"],
+      "asserted_at": "2015-08-13",
+      "entered_at": "2026-05-29",
+      "confidence": "established"
+    },
+    "_note": "Position is not stored here; it is time-dependent and lives in playthrough as measured-then facts."
+  },
+
+  "wardrobe": {
+    "_note": "Empty. A celestial body has no swappable per-scene appearance state in this model."
+  },
+
+  "play": {
+    "scope": "canonical",
+    "physics_roles": ["light_source", "gravitational_primary"],
+    "_note": "Affordances: anchors the orbital reference frame; emits light. Game-AI rules for the solar-system dollhouse live here."
+  },
+
+  "catalog": {
+    "_note": "Possibility space. For an astronomical body this is thin; for the Sun-as-symbol concept doll (a separate doll) the catalog would hold every meaning the symbol could carry."
+  },
+
+  "company": {
+    "scope": "canonical",
+    "edges": [
+      {
+        "type": "aspect",
+        "aspect": "conjunction",
+        "to": "doll:moon",
+        "angle_deg": 2.4,
+        "computed_from": "positions",
+        "as_of": "1989-06-15T14:30:00Z",
+        "_note": "Aspects are typed company edges, pure functions of position at a timestamp. Recomputed, never guessed."
+      },
+      {
+        "type": "contained_by",
+        "to": "doll:solar-system-dollhouse"
+      }
+    ]
+  },
+
+  "story": {
+    "scope": "private",
+    "mempalace_links": [],
+    "_note": "Empty and ready. Personal meaning of the Sun placement links here to MemPalace closet/drawer ids. Sovereign, never leaves the machine."
+  },
+
+  "origin": {
+    "_note": "Provenance is per facet. self/body/play/company above are canonical from astronomy sources (no VLM needed: the sky is already digitized). story is private, authored by the owner.",
+    "self": "astronomy:catalog",
+    "body.mass_kg": "iau:nominal_solar_mass_parameter",
+    "company.edges": "ephemeris:computed",
+    "story": "owner:manual"
+  },
+
+  "playthrough": [
+    {
+      "at": "2026-05-29T00:00:00Z",
+      "event": "doll_created",
+      "facets": ["self", "body", "play"],
+      "by": "owner:manual"
+    },
+    {
+      "at": "1989-06-15T14:30:00Z",
+      "event": "measured_position",
+      "facet": "position",
+      "value": {
+        "ecliptic_longitude_deg": 84.6,
+        "ecliptic_latitude_deg": 0.0
+      },
+      "confidence_kind": "measurement",
+      "confidence": "established",
+      "asserted_by": ["ephemeris:de440"],
+      "_note": "A measured-then fact. True as measured at this instant. This is how an ephemeris becomes a playthrough; a natal chart is the playset frozen at a birth timestamp."
+    }
+  ]
+}

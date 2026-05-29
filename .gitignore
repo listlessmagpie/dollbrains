@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Local data: never commit a real dollbrain. Dolls are sovereign.
+# Only hand-authored example dolls (dolls/*.example.json) belong in git.
+dolls/*.json
+!dolls/*.example.json
+*.sqlite3
+palace/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
