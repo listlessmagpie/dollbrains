@@ -46,7 +46,7 @@
         "to": "doll:moon",
         "angle_deg": 2.4,
         "computed_from": "positions",
-        "as_of": "1989-06-15T14:30:00Z",
+        "as_of": "2000-01-01T12:00:00Z",
         "_note": "Aspects are typed company edges, pure functions of position at a timestamp. Recomputed, never guessed."
       },
       {
@@ -78,11 +78,11 @@
       "by": "owner:manual"
     },
     {
-      "at": "1989-06-15T14:30:00Z",
+      "at": "2000-01-01T12:00:00Z",
       "event": "measured_position",
       "facet": "position",
       "value": {
-        "ecliptic_longitude_deg": 84.6,
+        "ecliptic_longitude_deg": 280.4,
         "ecliptic_latitude_deg": 0.0
       },
       "confidence_kind": "measurement",

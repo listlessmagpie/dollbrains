@@ -4,6 +4,8 @@ A persistent world model for a human life. DollBrains turns real people, places,
 
 It is the world object layer of the Hal Friday personal AI system. It is also the answer to a specific failure: current AI treats the past as a probability distribution it has to regenerate every time, which is why it hallucinates and struggles with recall. DollBrains stores the past as deterministic, queryable state. **The dollhouse remembers. The model only translates.**
 
+> **Rights:** this repository is public for visibility, not for use. All rights reserved. You are welcome to be inspired by the ideas; you may not copy, reuse, or build upon the work itself without permission. See [LICENSE](LICENSE).
+
 ## The core idea
 
 Games solved persistent world state decades ago for almost no energy. A physics engine holds thousands of objects with properties and relationships and runs them forward with cheap math, never re-reasoning from scratch. Modern AI, by contrast, re-perceives and re-reasons from raw input on every single operation and then throws the understanding away (Netflix's VOID is the motivating example: brilliant per-clip physics reasoning, retained nowhere).
